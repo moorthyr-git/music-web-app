@@ -22,10 +22,11 @@ steps:
     goals: 'package'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '${build.sourcesDirectory}'
+    SourceFolder: '${system.defaultworkingdirectory}'
     Contents: '**/*.jar'
-    TargetFolder: '${build.artifactStagingDirectory}'
+    TargetFolder: '${build.artifactstagingdirectory}'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(build.ArtifactStagingDirectory)'
+    PathtoPublish: '$(build.artifactstagingdirectory)'
     ArtifactName: 'drop'
+    publishLocation: 'Container'
