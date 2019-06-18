@@ -8,3 +8,8 @@ spring:
 management:
   security:
     enabled: false
+    
+# azure application insights
+azure:
+  application-insights:
+    instrumentation-key: 96aaa22a-dce1-4648-9550-7b73b37cf529
